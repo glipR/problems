@@ -1,0 +1,10 @@
+5 4
+alice 300
+bob 100000
+clarissa 300
+daniel 0
+erin 0
+alice gives bob 100
+clarissa gives bob 100
+alice gives daniel 250
+clarissa gives erin 250

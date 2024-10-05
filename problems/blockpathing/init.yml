@@ -1,0 +1,17 @@
+test_cases:
+- in: tests/1.in
+  out: tests/1.out
+  points: 0
+- in: tests/2.in
+  out: tests/2.out
+  points: 25
+- in: tests/3.in
+  out: tests/3.out
+  points: 25
+- in: tests/4.in
+  out: tests/4.out
+  points: 25
+- in: tests/5.in
+  out: tests/5.out
+  points: 25
+checker: floats

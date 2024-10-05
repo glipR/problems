@@ -1,0 +1,82 @@
+test_cases:
+- batched:
+  - in: tests/1_1.in
+    out: tests/1_1.out
+  - in: tests/1_10.in
+    out: tests/1_10.out
+  - in: tests/1_11.in
+    out: tests/1_11.out
+  - in: tests/1_12.in
+    out: tests/1_12.out
+  - in: tests/1_13.in
+    out: tests/1_13.out
+  - in: tests/1_14.in
+    out: tests/1_14.out
+  - in: tests/1_15.in
+    out: tests/1_15.out
+  - in: tests/1_16.in
+    out: tests/1_16.out
+  - in: tests/1_17.in
+    out: tests/1_17.out
+  - in: tests/1_18.in
+    out: tests/1_18.out
+  - in: tests/1_19.in
+    out: tests/1_19.out
+  - in: tests/1_2.in
+    out: tests/1_2.out
+  - in: tests/1_20.in
+    out: tests/1_20.out
+  - in: tests/1_21.in
+    out: tests/1_21.out
+  - in: tests/1_22.in
+    out: tests/1_22.out
+  - in: tests/1_23.in
+    out: tests/1_23.out
+  - in: tests/1_24.in
+    out: tests/1_24.out
+  - in: tests/1_25.in
+    out: tests/1_25.out
+  - in: tests/1_26.in
+    out: tests/1_26.out
+  - in: tests/1_27.in
+    out: tests/1_27.out
+  - in: tests/1_28.in
+    out: tests/1_28.out
+  - in: tests/1_29.in
+    out: tests/1_29.out
+  - in: tests/1_3.in
+    out: tests/1_3.out
+  - in: tests/1_30.in
+    out: tests/1_30.out
+  - in: tests/1_31.in
+    out: tests/1_31.out
+  - in: tests/1_32.in
+    out: tests/1_32.out
+  - in: tests/1_33.in
+    out: tests/1_33.out
+  - in: tests/1_34.in
+    out: tests/1_34.out
+  - in: tests/1_35.in
+    out: tests/1_35.out
+  - in: tests/1_36.in
+    out: tests/1_36.out
+  - in: tests/1_37.in
+    out: tests/1_37.out
+  - in: tests/1_38.in
+    out: tests/1_38.out
+  - in: tests/1_39.in
+    out: tests/1_39.out
+  - in: tests/1_4.in
+    out: tests/1_4.out
+  - in: tests/1_5.in
+    out: tests/1_5.out
+  - in: tests/1_6.in
+    out: tests/1_6.out
+  - in: tests/1_7.in
+    out: tests/1_7.out
+  - in: tests/1_8.in
+    out: tests/1_8.out
+  - in: tests/1_9.in
+    out: tests/1_9.out
+  points: 100
+

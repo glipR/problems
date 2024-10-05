@@ -1,0 +1,92 @@
+custom_judge: grader.py
+test_cases:
+- batched:
+  - in: tests/1_1.in
+    out: tests/1_1.out
+  - in: tests/1_10.in
+    out: tests/1_10.out
+  - in: tests/1_2.in
+    out: tests/1_2.out
+  - in: tests/1_3.in
+    out: tests/1_3.out
+  - in: tests/1_4.in
+    out: tests/1_4.out
+  - in: tests/1_5.in
+    out: tests/1_5.out
+  - in: tests/1_6.in
+    out: tests/1_6.out
+  - in: tests/1_7.in
+    out: tests/1_7.out
+  - in: tests/1_8.in
+    out: tests/1_8.out
+  - in: tests/1_9.in
+    out: tests/1_9.out
+  points: 20
+- batched:
+  - in: tests/2_1.in
+    out: tests/2_1.out
+  - in: tests/2_10.in
+    out: tests/2_10.out
+  - in: tests/2_2.in
+    out: tests/2_2.out
+  - in: tests/2_3.in
+    out: tests/2_3.out
+  - in: tests/2_4.in
+    out: tests/2_4.out
+  - in: tests/2_5.in
+    out: tests/2_5.out
+  - in: tests/2_6.in
+    out: tests/2_6.out
+  - in: tests/2_7.in
+    out: tests/2_7.out
+  - in: tests/2_8.in
+    out: tests/2_8.out
+  - in: tests/2_9.in
+    out: tests/2_9.out
+  points: 20
+- batched:
+  - in: tests/3_1.in
+    out: tests/3_1.out
+  - in: tests/3_10.in
+    out: tests/3_10.out
+  - in: tests/3_2.in
+    out: tests/3_2.out
+  - in: tests/3_3.in
+    out: tests/3_3.out
+  - in: tests/3_4.in
+    out: tests/3_4.out
+  - in: tests/3_5.in
+    out: tests/3_5.out
+  - in: tests/3_6.in
+    out: tests/3_6.out
+  - in: tests/3_7.in
+    out: tests/3_7.out
+  - in: tests/3_8.in
+    out: tests/3_8.out
+  - in: tests/3_9.in
+    out: tests/3_9.out
+  points: 20
+- batched:
+  - in: tests/4_1.in
+    out: tests/4_1.out
+  - in: tests/4_10.in
+    out: tests/4_10.out
+  - in: tests/4_2.in
+    out: tests/4_2.out
+  - in: tests/4_3.in
+    out: tests/4_3.out
+  - in: tests/4_4.in
+    out: tests/4_4.out
+  - in: tests/4_5.in
+    out: tests/4_5.out
+  - in: tests/4_6.in
+    out: tests/4_6.out
+  - in: tests/4_7.in
+    out: tests/4_7.out
+  - in: tests/4_8.in
+    out: tests/4_8.out
+  - in: tests/4_9.in
+    out: tests/4_9.out
+  points: 40
+unbuffered: true
+

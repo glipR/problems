@@ -1,0 +1,50 @@
+test_cases:
+- batched:
+  - in: tests/0_1.in
+    out: tests/0_1.out
+  points: 0
+- batched:
+  - in: tests/1_1.in
+    out: tests/1_1.out
+  - in: tests/1_10.in
+    out: tests/1_10.out
+  - in: tests/1_2.in
+    out: tests/1_2.out
+  - in: tests/1_3.in
+    out: tests/1_3.out
+  - in: tests/1_4.in
+    out: tests/1_4.out
+  - in: tests/1_5.in
+    out: tests/1_5.out
+  - in: tests/1_6.in
+    out: tests/1_6.out
+  - in: tests/1_7.in
+    out: tests/1_7.out
+  - in: tests/1_8.in
+    out: tests/1_8.out
+  - in: tests/1_9.in
+    out: tests/1_9.out
+  points: 66
+- batched:
+  - in: tests/2_1.in
+    out: tests/2_1.out
+  - in: tests/2_10.in
+    out: tests/2_10.out
+  - in: tests/2_2.in
+    out: tests/2_2.out
+  - in: tests/2_3.in
+    out: tests/2_3.out
+  - in: tests/2_4.in
+    out: tests/2_4.out
+  - in: tests/2_5.in
+    out: tests/2_5.out
+  - in: tests/2_6.in
+    out: tests/2_6.out
+  - in: tests/2_7.in
+    out: tests/2_7.out
+  - in: tests/2_8.in
+    out: tests/2_8.out
+  - in: tests/2_9.in
+    out: tests/2_9.out
+  points: 33
+

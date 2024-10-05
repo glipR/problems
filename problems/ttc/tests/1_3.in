@@ -1,0 +1,14 @@
+4 9
+CityA ArmyA
+CityB ArmyB
+CityC ArmyC
+CityD ArmyD
+ATTACK ArmyA ArmyB 10
+ATTACK ArmyC ArmyA 15
+DEFENDER CityB
+RESET 13
+DEFENDER CityB
+RESET 5
+DEFENDER CityB
+ATTACK ArmyB ArmyC 20
+DEFENDER CityC

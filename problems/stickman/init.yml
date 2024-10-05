@@ -1,0 +1,23 @@
+test_cases:
+- in: tests/0_1.in
+  out: tests/0_1.out
+  points: 0
+- in: tests/1_1.in
+  out: tests/1_1.out
+  points: 20
+- in: tests/1_2.in
+  out: tests/1_2.out
+  points: 20
+- in: tests/1_3.in
+  out: tests/1_3.out
+  points: 20
+- in: tests/1_4.in
+  out: tests/1_4.out
+  points: 20
+- in: tests/1_5.in
+  out: tests/1_5.out
+  points: 20
+- in: tests/1_6.in
+  out: tests/1_6.out
+  points: 20
+checker: checker.py

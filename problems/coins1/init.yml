@@ -1,0 +1,38 @@
+custom_judge: grader.py
+test_cases:
+- batched:
+  - in: tests/1_1.in
+    out: tests/1_1.in
+  - in: tests/1_2.in
+    out: tests/1_2.in
+  - in: tests/1_3.in
+    out: tests/1_3.in
+  - in: tests/1_4.in
+    out: tests/1_4.in
+  - in: tests/1_5.in
+    out: tests/1_5.in
+  points: 20
+- batched:
+  - in: tests/2_1.in
+    out: tests/2_1.in
+  - in: tests/2_10.in
+    out: tests/2_10.in
+  - in: tests/2_2.in
+    out: tests/2_2.in
+  - in: tests/2_3.in
+    out: tests/2_3.in
+  - in: tests/2_4.in
+    out: tests/2_4.in
+  - in: tests/2_5.in
+    out: tests/2_5.in
+  - in: tests/2_6.in
+    out: tests/2_6.in
+  - in: tests/2_7.in
+    out: tests/2_7.in
+  - in: tests/2_8.in
+    out: tests/2_8.in
+  - in: tests/2_9.in
+    out: tests/2_9.in
+  points: 80
+unbuffered: true
+

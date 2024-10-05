@@ -1,0 +1,11 @@
+5 5
+alice 20
+bob 10
+clarissa 15
+daniel 50
+erin 0
+alice gives clarissa 20
+clarissa gives daniel 15
+clarissa gives erin 30
+bob gives erin 10
+bob gives daniel 20

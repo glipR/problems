@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.page-content {
+    max-width: calc(min(90%, 1200px));
+    margin: auto;
+    min-height: calc(100vh - 50px);
+}
+
+/* NAV */
+
+#top-nav {
+    width: 100%;
+    height: 50px;
+    background: #264653;
+    color: #ffffff;
+    padding: 5px 20px;
+}
+#top-nav h1 {
+    margin: 0;
+    line-height: 50px;
+    height: 50px;
+}
+
+/* SEARCH UI */
+
+.search-container {
+    display: flex;
+}
+
+.search-and-settings {
+    flex-grow: 4;
+    padding-right: 30px;
+}
+
+#search-text {
+    width: 100%;
+    font-size: 24pt;
+}
+
+.settings {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.star-container {
+    display: flex;
+}
+
+.select-single input, .select-multiple input {
+    width: 100%
+}
+
+.select-options {
+    max-height: 0;
+    width: 100%;
+    overflow-y: visible;
+    position: relative;
+}
+
+.select-option {
+    background: #ffffff;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    z-index: 1;
+    position: relative;
+    padding: 2px 5px;
+}
+
+.checkbox input, .checkbox p {
+    display: inline-block;
+}
+
+/* PROBLEMS */
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-result {
+    width: calc(min(100%, 0.8 * min(1200px, 90%)));
+    min-height: 120px;
+    position: relative;
+}
+
+.problem-title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0px;
+}
+
+.problem-tags {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    max-width: 250px;
+    gap: 10px;
+}
+
+.problem-difficulty {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    display: flex;
+}
+
+.problem-contest {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.search-line {
+    border-bottom: 1px solid #000000;
+    width: calc(0.8 * min(100%, 0.8 * min(1200px, 90%)));
+    margin-left: calc(0.1 * min(100%, 0.8 * min(1200px, 90%)));
+}
+
+.star-fill {
+    background:url("star-fill.svg");
+    width: 32px;
+    height: 32px;
+}
+.star-empty {
+    background:url("star-empty.svg");
+    width: 32px;
+    height: 32px;
+}

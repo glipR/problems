@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/lunr/lunr.js"></script>
+    </head>
+    <body>
+        <div id="top-nav">
+            <h1>Jackson's Problems</h1>
+        </div>
+        <div class="page-content">
+            <h1>Problem Search</h1>
+            <div class="search-container">
+                <div class="search-and-settings">
+                    <input id="search-text">
+                    <div class="settings">
+                        <div class="checkbox">
+                            <input type="checkbox">
+                            <p>Show Tags</p>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                            <p>Show Difficulty</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-filters">
+                    <div class="search-filter search-filter-tags">
+                        <p>Tags</p>
+                        <div class="select-multiple">
+                            <input>
+                            <div class="select-options" style="display: none;">
+                                <div class="select-option">Math</div>
+                                <div class="select-option">Implementation</div>
+                                <div class="select-option">Dynamic Programming</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-filter search-filter-contest">
+                        <p>Contest</p>
+                        <div class="select-single">
+                            <input>
+                            <div class="select-options" style="display: none;">
+                                <div class="select-option">MCPC-21</div>
+                                <div class="select-option">MCPC-22</div>
+                                <div class="select-option">MCPC-23</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-filter search-filter-difficulty">
+                        <p>Difficulty</p>
+                        <div class="star-container">
+                            <div class="star-empty"></div>
+                            <div class="star-fill"></div>
+                            <div class="star-fill"></div>
+                            <div class="star-fill"></div>
+                            <div class="star-empty"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-results">
+            </div>
+        </div>
+        <script>
+            const problems = [{"title": "Card Trick", "tags": ["Communication", "Math"], "slug": "cardtrick", "difficulty": 3, "contest": "MCPC-22"}, {"title": "Coins [I]", "tags": ["Interactive", "Math"], "slug": "coins1", "difficulty": 2, "contest": "DSLESS-23"}, {"title": "Diabolical Defuser", "tags": ["Communication", "Graphs"], "slug": "diabolicaldefuser", "difficulty": 5, "contest": "MCPC-22"}];
+            const tags = ["Math", "Graphs", "Interactive", "Communication"];
+            const contests = ["BEG-24", "BEG-24", "DSLESS-23", "MCPC-20", "MCPC-21", "MCPC-22", "MCPC-23", "MCPC-24"];
+
+            const filledStar = document.getElementById("filled-star");
+            const emptyStar = document.getElementById("empty-star");
+
+            const makeProblem = (problemDocument) => {
+                const container = document.createElement("div")
+                container.classList.add("search-result");
+                const title = document.createElement("h2");
+                title.classList.add("problem-title");
+                title.innerHTML = problemDocument.title;
+                const tags = document.createElement("div");
+                tags.classList.add("problem-tags");
+                tags.append(...problemDocument.tags.map(tag => {
+                    const tagElem = document.createElement("div");
+                    tagElem.classList.add("problem-tag");
+                    tagElem.innerHTML = tag;
+                    return tagElem;
+                }))
+                const difficulty = document.createElement("div");
+                difficulty.classList.add("problem-difficulty");
+                for (let i=0; i<5; i++) {
+                    const star = document.createElement("div");
+                    if (i < problemDocument.difficulty) {
+                        star.classList.add("star-fill");
+                    } else {
+                        star.classList.add("star-empty");
+                    }
+                    difficulty.appendChild(star);
+                }
+                const contest = document.createElement("div");
+                contest.classList.add("problem-contest");
+                contest.innerHTML = problemDocument.contest;
+                container.appendChild(title);
+                container.appendChild(tags);
+                container.appendChild(difficulty);
+                container.appendChild(contest);
+                return container;
+            }
+            const problemMap = new Object({});
+            problems.forEach(problemDoc => {
+                problemMap[problemDoc.slug] = makeProblem(problemDoc);
+            })
+
+            const searchResults = document.querySelector(".search-results");
+
+            const showResults = (documents) => {
+                searchResults.textContent = "";
+                documents.forEach((doc, i) => {
+                    searchResults.appendChild(problemMap[doc.slug]);
+                    if (i !== documents.length - 1) {
+                        searchLine = document.createElement("div");
+                        searchLine.classList.add("search-line");
+                        searchResults.appendChild(searchLine);
+                    }
+                })
+            };
+            showResults(problems);
+
+            var searchIndex = lunr(function () {
+                this.ref('slug')
+                this.field('title')
+
+                problems.forEach(function (doc) {
+                    this.add(doc)
+                }, this)
+            });
+            const searchBar = document.getElementById("search-text");
+            searchBar.addEventListener("input", (e) => {
+                searchText = e.target.value.trim();
+                slugs = searchIndex.search(`*${searchText}*`).map(obj => ({ slug: obj.ref }));
+                showResults(slugs);
+            })
+        </script>
+    </body>
+</html>
